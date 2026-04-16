@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="みのじゅんの自己紹介ページ - ツール開発が得意なクリエイター">
+    <title>みのじゅん | Self Introduction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- パーティクル背景 -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ナビゲーション -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">MJ</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#ai-philosophy">AI Philosophy</a></li>
+                <li><a href="#challenge">Challenge</a></li>
+                <li><a href="#works">Works</a></li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle" aria-label="メニュー切替">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- モバイルメニュー -->
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#ai-philosophy">AI Philosophy</a></li>
+            <li><a href="#challenge">Challenge</a></li>
+            <li><a href="#works">Works</a></li>
+        </ul>
+    </div>
+
+    <!-- ヒーローセクション -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge scroll-reveal">
+                <span class="badge-dot"></span>
+                <span>Tool Developer</span>
+            </div>
+            <h1 class="hero-title scroll-reveal">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name">
+                    <span class="gradient-text">みのじゅん</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle scroll-reveal">
+                ツール開発で、あったらいいなを形にするクリエイター
+            </p>
+            <div class="hero-cta scroll-reveal">
+                <a href="#about" class="btn btn-primary">
+                    <span>もっと見る</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M19 12l-7 7-7-7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- 自己紹介セクション -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card scroll-reveal">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>ハンドルネーム</h3>
+                    <p class="card-highlight">みのじゅん</p>
+                </div>
+                <div class="about-card scroll-reveal" style="--delay: 0.1s">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>得意なこと</h3>
+                    <p class="card-highlight">ツール開発</p>
+                    <p class="card-desc">欲しいものを自分で作る。<br>それが最大の武器。</p>
+                </div>
+                <div class="about-card scroll-reveal" style="--delay: 0.2s">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                    </div>
+                    <h3>興味があること</h3>
+                    <p class="card-highlight">ツール開発</p>
+                    <p class="card-desc">日常の不便を解消する<br>ツールを作ること。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI哲学セクション -->
+    <section id="ai-philosophy" class="section philosophy-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-number">02</span>
+                <h2 class="section-title">AI Philosophy</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="philosophy-content">
+                <div class="philosophy-card main-card scroll-reveal">
+                    <div class="quote-mark">"</div>
+                    <h3>自分にとってAIとは</h3>
+                    <p class="philosophy-text">
+                        大抵の努力の必要性をなくしてくれる<br>
+                        <span class="text-accent">最強のオールマイティな道具</span>
+                    </p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="philosophy-sub-cards">
+                    <div class="philosophy-card sub-card scroll-reveal">
+                        <div class="sub-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>今後AIとどう向き合いたいか</h3>
+                        <p>最強の道具として使用したい。AIの力を最大限引き出し、自分のビジョンを実現するためのパートナーとして活用していく。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 挑戦セクション -->
+    <section id="challenge" class="section challenge-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Challenge</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="challenge-content scroll-reveal">
+                <div class="challenge-visual">
+                    <div class="orbit-container">
+                        <div class="orbit orbit-1">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit orbit-2">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit orbit-3">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit-center">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="challenge-text">
+                    <h3>この授業を通して挑戦したいこと</h3>
+                    <p class="challenge-statement">
+                        <span class="highlight-line">ほしいと思ったものを</span>
+                        <span class="highlight-line accent">全て実現できるようになりたい</span>
+                    </p>
+                    <p class="challenge-desc">
+                        アイデアを思いついたら、それをすぐに形にできる力。
+                        技術とAIを武器に、想像を現実に変える。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成果物セクション -->
+    <section id="works" class="section works-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Works</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="works-description scroll-reveal">
+                授業を通して制作したツールやプロジェクトをここに掲載していきます。
+            </p>
+            <div class="works-grid" id="works-grid">
+                <!-- 成果物カードのテンプレート（来るべき成果物のプレースホルダー） -->
+                <div class="work-card work-card-placeholder scroll-reveal">
+                    <div class="work-card-inner">
+                        <div class="work-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="12" y1="8" x2="12" y2="16"/>
+                                <line x1="8" y1="12" x2="16" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3>Coming Soon</h3>
+                        <p>新しいプロジェクトがここに追加されます</p>
+                    </div>
+                </div>
+                <div class="work-card work-card-placeholder scroll-reveal" style="--delay: 0.1s">
+                    <div class="work-card-inner">
+                        <div class="work-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="12" y1="8" x2="12" y2="16"/>
+                                <line x1="8" y1="12" x2="16" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3>Coming Soon</h3>
+                        <p>新しいプロジェクトがここに追加されます</p>
+                    </div>
+                </div>
+                <div class="work-card work-card-placeholder scroll-reveal" style="--delay: 0.2s">
+                    <div class="work-card-inner">
+                        <div class="work-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="12" y1="8" x2="12" y2="16"/>
+                                <line x1="8" y1="12" x2="16" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3>Coming Soon</h3>
+                        <p>新しいプロジェクトがここに追加されます</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">MJ</div>
+                <p class="footer-text">© 2026 みのじゅん. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
